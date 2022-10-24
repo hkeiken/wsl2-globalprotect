@@ -1,4 +1,4 @@
-# wsl2-globalprotect
+# Internet connectivity
 A small repository to show a way to solve Windows Subsystem for Linux 2 how to co-exist with Palo Alto Networks Global Protect.
 
 Windows has two versions of WSL or Windows Subsystem for Linux. The newer one WSL version 2 changes how connectivity happens, and a lot of VPNs has issues with this as connecting VPN breaks internet connectivity. Here is a way I found it possible to solve this issue. My understanding of the issue is basically a routing metric issue.
@@ -31,3 +31,23 @@ and another string named "context" with value "admin" (this is to make the batch
 
 An easy way is to import into the Windows registry the "globalprotect-post-vpn-connect.reg" from this repositry after eventual edits.  
 
+# VPN Connectivity
+
+If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, one way to do so is installing the Global Protect client inside the guest operating system. It worked for me doing it so as below for Global Protect 6.0.1 for Linux.
+
+## Install Global Protect
+
+tar zxvf PanGPLinux-6.0.1-c6.tgz
+tar xzvf GlobalProtect_tar-6.0.1.1-6.tgz
+sudo ./install.sh
+
+## Change metrics on the default route
+
+ip route del default via 172.18.128.1
+ip route add default via 172.18.128.1 metric 100
+
+It looks like the default metrics is too high for the default route for the vpn route to take over. 
+
+## Connect to vpn
+
+%globalprotect connect --portal vpn.example.com
