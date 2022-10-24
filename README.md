@@ -36,18 +36,19 @@ An easy way is to import into the Windows registry the "globalprotect-post-vpn-c
 If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, one way to do so is installing the Global Protect client inside the guest operating system. It worked for me doing it so as below for Global Protect 6.0.1 for Linux.
 
 ## Install Global Protect
-
+```
 tar zxvf PanGPLinux-6.0.1-c6.tgz
 tar xzvf GlobalProtect_tar-6.0.1.1-6.tgz
 sudo ./install.sh
-
+```
 ## Change metrics on the default route
-
+```
 ip route del default via 172.18.128.1
 ip route add default via 172.18.128.1 metric 100
-
+```
 It looks like the default metrics is too high for the default route for the vpn route to take over. 
 
 ## Connect to vpn
-
-%globalprotect connect --portal vpn.example.com
+```
+globalprotect connect --portal vpn.example.com
+```
