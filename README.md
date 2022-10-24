@@ -1,5 +1,5 @@
 # Internet connectivity
-A small repository to show a way to solve Windows Subsystem for Linux 2 how to co-exist with Palo Alto Networks Global Protect.
+A small repository to show a way to make Windows Subsystem for Linux 2 how to co-exist with Palo Alto Networks Global Protect VPN Client.
 
 Windows has two versions of WSL or Windows Subsystem for Linux. The newer one WSL version 2 changes how connectivity happens, and a lot of VPNs has issues with this as connecting VPN breaks internet connectivity. Here is a way I found it possible to solve this issue. My understanding of the issue is basically a routing metric issue.
 
