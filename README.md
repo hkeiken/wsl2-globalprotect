@@ -26,8 +26,8 @@ Global Protect is capable of running a "Post VPN Connect" script as an admin use
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Palo Alto Networks\GlobalProtect\Settings
 
-And then add on a new string value "command" with the batch file (this is the batch file that triggers the PowerShell script)
+And then add on a new string named "command" with the batch file as value (this is the batch file that triggers the PowerShell script)
 and another string named "context" with value "admin" (this is to make the batch file be run as administrator).
 
-An easy way is to import the "globalprotect-post-vpn-connect.reg" from this repositry after eventual edits.  
+An easy way is to import into the Windows registry the "globalprotect-post-vpn-connect.reg" from this repositry after eventual edits.  
 
