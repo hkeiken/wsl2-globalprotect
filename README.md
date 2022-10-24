@@ -22,7 +22,8 @@ A simple script to run the powershell script. As the Powershell script was not p
 
 ## 3 - Configuration of Global Protect 
 
-Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key named post-vpn-connect in  
+Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key named post-vpn-connect in 
+
 HKEY_LOCAL_MACHINE\SOFTWARE\Palo Alto Networks\GlobalProtect\Settings
 
 And then add on a new string value "command" with the batch file (this is the batch file that triggers the PowerShell script)
