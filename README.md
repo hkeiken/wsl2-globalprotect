@@ -10,13 +10,18 @@ This test is done on:
 
 The solution consists of:
 
-1 - Powershell script to change interface metric on the PANGP virtual interface
+1 - Powershell script 
+
+To change interface metric on the PANGP virtual interface, so the WSL operative system can access internet outside the vpn tunnell.
+
 2 - A batch script to start the Powershell script
+
+A simple script to run the powershell script. As the Powershell script was not possible to run from Global Protect VPN connect event, a workaround was found with triggering it from a batch file.
+
 3 - Configuration of Global Protect to run this script each time Global Connect VPN connects.
 
-1 - Powershell script
+Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key in 
 
-The script simply changes metric 
 
 
 
