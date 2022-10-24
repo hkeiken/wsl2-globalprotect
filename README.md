@@ -43,8 +43,8 @@ sudo ./install.sh
 ```
 ## Change metrics on the default route
 ```
-ip route del default via 172.18.128.1
-ip route add default via 172.18.128.1 metric 100
+sudo ip route del default via 172.18.128.1
+sudo ip route add default via 172.18.128.1 metric 100
 ```
 It looks like the default metrics is too high for the default route for the vpn route to take over. 
 
