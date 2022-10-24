@@ -12,7 +12,7 @@ The solution consists of:
 
 ## 1 - Powershell script 
 
-To change interface metric on the PANGP virtual interface, so the WSL operative system can access internet outside the vpn tunnell.
+To change interface metric on the PANGP virtual interface, so the WSL operative system can access internet outside the vpn tunell.
 
 Orgin: https://github.com/microsoft/WSL/issues/5068#issuecomment-1268171185
 
