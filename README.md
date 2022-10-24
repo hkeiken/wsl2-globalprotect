@@ -5,7 +5,7 @@ Windows has two versions of WSL or Windows Subsystem for Linux. The newer one WS
 
 This test is done on:
 - Microsoft Windows 10 version 10.0.19044.2130
-- Global Protect version 6.0.3
+- Global Protect version 6.0.3 for Windows
 - Debian 11 in WSL 
 
 The solution consists of:
