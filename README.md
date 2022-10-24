@@ -10,17 +10,17 @@ This test is done on:
 
 The solution consists of:
 
-1 - Powershell script 
+## 1 - Powershell script 
 
 To change interface metric on the PANGP virtual interface, so the WSL operative system can access internet outside the vpn tunnell.
 
 Orgin: https://github.com/microsoft/WSL/issues/5068#issuecomment-1268171185
 
-2 - A batch script to start the Powershell script
+## 2 - A batch script to start the Powershell script
 
 A simple script to run the powershell script. As the Powershell script was not possible to run from Global Protect VPN connect event, a workaround was found with triggering it from a batch file.
 
-3 - Configuration of Global Protect to run this script each time Global Connect VPN connects.
+## 3 - Configuration of Global Protect to run this script each time Global Connect VPN connects.
 
 Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key named post-vpn-connect in  
 HKEY_LOCAL_MACHINE\SOFTWARE\Palo Alto Networks\GlobalProtect\Settings
