@@ -31,7 +31,9 @@ A simple script named wsl-trigger.bat to run the powershell script. As the Power
 
 Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key named post-vpn-connect in 
 
+'''
 HKEY_LOCAL_MACHINE\SOFTWARE\Palo Alto Networks\GlobalProtect\Settings
+'''
 
 And then add on a new string named "command" with the batch file as value (this is the batch file that triggers the PowerShell script)
 and another string named "context" with value "admin" (this is to make the batch file be run as administrator).
@@ -45,8 +47,9 @@ An easy way to do this is to save the script files in c:/tmp and import the Wind
 
 # 2. VPN Connectivity
 
-If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, a way to do so is installing the Global Protect client inside the guest operating system. It worked for me doing it so as below for Global Protect 6.0.1 for Linux. 
-## a Install Global Protect
+If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, a way to do so is installing the Global Protect client inside the guest operating system. This procedure worked for Global Protect 6.0.1 for Linux. 
+
+## a - Install Global Protect
 
 Fetch a copy if the Global Protect client for Linux, and install it. [Documentation](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux/use-the-globalprotect-app-for-linux)
 
@@ -55,9 +58,9 @@ tar zxvf PanGPLinux-6.0.1-c6.tgz
 tar xzvf GlobalProtect_tar-6.0.1.1-6.tgz
 sudo ./install.sh
 ```
-## b Change metrics on the default route
+## b - Change metrics on the default route
 
-It looks like the default metrics is too high for the default route for the vpn route to take over. This is how to handle this manually on the Debian used in this example. Automation will be dependent of the distribution used for WSL2 guest. 
+It looks like the default metrics is too high for the default route for the vpn default route to take over. This is how to handle this manually on the Debian used in this example. Automation will be dependent of the distribution used for WSL2 guest. 
 
 ```
 sudo ip route del default via 172.18.128.1
@@ -65,7 +68,7 @@ sudo ip route add default via 172.18.128.1 metric 100
 ```
  
 
-## c Connect to vpn
+## c - Connect to vpn
 ```
 globalprotect connect --portal vpn.example.com
 ```
