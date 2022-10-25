@@ -38,7 +38,8 @@ and another string named "context" with value "admin" (this is to make the batch
 
 An easy way to do this is to save the script files in c:/tmp and import the Windows registry the "globalprotect-post-vpn-connect.reg" from this repositry to create the right settings.  
 
-[Documentation1 overview](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/deploy-app-settings-to-windows-endpoints/deploy-scripts-using-the-windows-registry#id3084dca9-6653-47b8-8154-598a4099049d) [Documentation details](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/customizable-app-settings/script-deployment-options)
+[Documentation 1](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/deploy-app-settings-to-windows-endpoints/deploy-scripts-using-the-windows-registry#id3084dca9-6653-47b8-8154-598a4099049d) 
+[Documentation 2](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/customizable-app-settings/script-deployment-options)
 
 
 # 2. VPN Connectivity
@@ -46,7 +47,7 @@ An easy way to do this is to save the script files in c:/tmp and import the Wind
 If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, a way to do so is installing the Global Protect client inside the guest operating system. It worked for me doing it so as below for Global Protect 6.0.1 for Linux. 
 ## a Install Global Protect
 
-Fetch a copy if the Global Protect client for Linux, and install it. [Documentation used](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux/use-the-globalprotect-app-for-linux)
+Fetch a copy if the Global Protect client for Linux, and install it. [Documentation](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux/use-the-globalprotect-app-for-linux)
 
 ```
 tar zxvf PanGPLinux-6.0.1-c6.tgz
