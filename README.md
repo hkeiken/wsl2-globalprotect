@@ -2,7 +2,7 @@
 
 Microsoft Windows has an easy accessible Linux capability with Windows Subsystem for Linux (WSL). Later a new version of WSL, version 2 has been implemented and this do not work well with VPN clients in general. For Palo Alto Networks Global Protect VPN client there are two issues adressed here:
 
-First when connecting Global Protect VPN connection the internet connectivity of the WSL2 guest operative system goes away. Below is shown how one can reconnect this, and automate how to reconnect this each time the Global Connect client connects to VPN.
+First when connecting Global Protect VPN connection the internet connectivity of the WSL2 guest operative system goes away. Below is shown how one can reconnect this, and automate doing this each time the Global Connect client connects to VPN.
 
 Second the WSL2 guest should be able to connect to the VPN. However, to make this happen one could use the VPN client from inside WSL2 guest operating system.
 
