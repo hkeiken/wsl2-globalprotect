@@ -25,7 +25,7 @@ To change interface metric on the PANGP virtual interface, so the WSL operative 
 
 A simple script named wsl-trigger.bat to run the powershell script. As the Powershell script was not possible to run from Global Protect VPN connect event, a workaround was found with triggering it from a batch file.
 
-Orgin of solution: X
+[Orgin](https://www.howtogeek.com/204088/how-to-use-a-batch-file-to-make-powershell-scripts-easier-to-run/)
 
 ## c - Configuration of Global Protect 
 
