@@ -4,11 +4,11 @@ Microsoft Windows has an easy accessible Linux capability with Windows Subsystem
 
 First when connecting Global Protect VPN connection the internet connectivity of the WSL2 guest operative system goes away. Below is shown how one can reconnect this, and automate how to reconnect this each time the Global Connect client connects to VPN.
 
-Both issues seems to be routing metric issues.
+Second, the WSL2 guest should be able to connect to the VPN. However, to make this happen one could use the VPN client from inside WSL2 guest operating system.
 
 # 1. Internet connectivity
 
-This test is done on:
+This test is done with:
 - Microsoft Windows 10 version 10.0.19044.2130
 - Global Protect version 6.0.3 for Windows
 - Debian 11 in WSL 
@@ -47,6 +47,10 @@ An easy way to do this is to save the script files in c:/tmp and import the Wind
 
 # 2. VPN Connectivity
 
+This test is done with:
+- Debian 11 in WSL2 guest operating system under Windows
+- Global Protect version 6.0.1 for Linux
+- 
 If one like to have the WSL2 guest operative system use Global Protect for connectivity to internal resources, a way to do so is installing the Global Protect client inside the guest operating system. This procedure worked for Global Protect 6.0.1 for Linux. 
 
 ## a - Install Global Protect
