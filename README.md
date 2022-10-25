@@ -39,6 +39,7 @@ and another string named "context" with value "admin" (this is to make the batch
 An easy way to do this is to save the script files in c:/tmp and import the Windows registry the "globalprotect-post-vpn-connect.reg" from this repositry to create the right settings.  
 
 [Documentation 1](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/deploy-app-settings-to-windows-endpoints/deploy-scripts-using-the-windows-registry#id3084dca9-6653-47b8-8154-598a4099049d) 
+
 [Documentation 2](https://docs.paloaltonetworks.com/globalprotect/9-1/globalprotect-admin/globalprotect-apps/deploy-app-settings-transparently/customizable-app-settings/script-deployment-options)
 
 
