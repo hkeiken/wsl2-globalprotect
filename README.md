@@ -31,9 +31,9 @@ A simple script named wsl-trigger.bat to run the powershell script. As the Power
 
 Global Protect is capable of running a "Post VPN Connect" script as an admin user. To do so, one will have to create a new key named post-vpn-connect in 
 
-'''
+```
 HKEY_LOCAL_MACHINE\SOFTWARE\Palo Alto Networks\GlobalProtect\Settings
-'''
+```
 
 And then add on a new string named "command" with the batch file as value (this is the batch file that triggers the PowerShell script)
 and another string named "context" with value "admin" (this is to make the batch file be run as administrator).
